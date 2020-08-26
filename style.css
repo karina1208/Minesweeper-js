@@ -1,0 +1,94 @@
+body {
+    font-family: 'Courier New', 'Courier Prime';
+    background-color: #1a1d2c;
+    margin: 0;
+}
+
+h1 {
+    margin: 0px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#top {
+    color: #22a0b6;
+    margin: 20px 10px 10px 10px;
+    height: 39px;
+    line-height: 39px;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    display: flex;
+}
+
+#flagCount {
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+#timer {
+    vertical-align: middle;
+    text-align: right;
+    font-size: 25px;
+}
+
+#footer {
+    text-align: center;
+}
+
+.button {
+    width: auto;
+    background-color: #1a1d2c;
+    font-family: 'Courier New', 'Courier Prime';
+    font-weight: bolder;
+    font-size: 25px;
+    color: #22a0b6;
+    border: 0px;
+    margin-top: 10px;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.grid {
+    height: 440px;
+    width: 440px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: #0e1723;
+}
+
+.grid div {
+    height: 40px;
+    width: 40px;
+    margin: 2px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.ori {
+    background-color: #06394c;
+    font-size: 30px;
+}
+
+.bomb {
+    font-size: 20px;
+}
+
+.bombAfter {
+    background-color: #0a101a;
+}
+
+.flag {
+    font-size: 20px;
+}
+
+.checked {
+    background-color: #0e1723;
+}
