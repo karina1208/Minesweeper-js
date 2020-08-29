@@ -41,7 +41,7 @@ h1 {
 
 .button {
     width: auto;
-    background-color: #1a1d2c;
+    background-color: #1a1d2c00;
     font-family: 'Courier New', 'Courier Prime';
     font-weight: bolder;
     font-size: 25px;
@@ -54,9 +54,35 @@ h1 {
     outline: none;
 }
 
-.grid {
+#choose {
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    background-color: #0e1723;
+    padding-bottom: 15px;
+}
+
+.gridEasy {
     height: 440px;
     width: 440px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: #0e1723;
+}
+
+.gridMedium {
+    height: 616px;
+    width: 616px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: #0e1723;
+}
+
+.gridHard {
+    height: 616px;
+    width: 1232px;
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
