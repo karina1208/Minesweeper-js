@@ -1,7 +1,12 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     font-family: 'Courier New', 'Courier Prime';
     background-color: #1a1d2c;
     margin: 0;
+    scrollbar-width: none;
 }
 
 h1 {
@@ -62,6 +67,10 @@ h1 {
     padding-bottom: 15px;
 }
 
+#game {
+    visibility: hidden;
+}
+
 .gridEasy {
     height: 440px;
     width: 440px;
@@ -101,6 +110,10 @@ h1 {
 .ori {
     background-color: #06394c;
     font-size: 30px;
+}
+
+.oriMid {
+    background-color: #072c3a;
 }
 
 .bomb {
