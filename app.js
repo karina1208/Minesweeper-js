@@ -35,8 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // -- create Board -- //
     function createBoard() {
         //default
-        header.innerHTML = 'Minesweeper'
-        game.style.visibility = 'hidden'
+        document.getElementById('header').innerHTML = 'Minesweeper'
+        document.getElementById('game').style.visibility = 'hidden'
         startTimeFunction()
 
         //print flagcount
