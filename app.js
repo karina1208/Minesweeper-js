@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let isGameOver = false
 
 
+
     // -- count time -- //
     let finish = false
     let sec = 0
@@ -50,8 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const gameArray = emptyArray.concat(bombsArray)
         const shuffledArray = gameArray.sort(() => Math.random() - 0.5)
 
-
-        for (let i = 0; i < width * height; i++) {
+        for (let i = 0; i < shuffledArray.length; i++) {
             const square = document.createElement('div')
             square.setAttribute('id', i)
             square.classList.add(shuffledArray[i])
@@ -69,14 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             })
 
-            // click
+            //click
             square.addEventListener('mouseup', function(e) {
                 console.log(e.button);
                 switch (e.button) {
-                    case 0:
+                    case 0: //normal click
                         click(square)
                         break;
-                    case 1:
+                    case 1: //middle click
                         e.preventDefault()
                         middleClickChange(square, "up")
                         break;
@@ -144,7 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (square.classList.contains('checked')) {
             const isLeftEdge = (currentId % width === 0)
             const isRightEdge = (currentId % width === width - 1)
-
             const neiCellId = []
 
             //check←
@@ -288,6 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const isRightEdge = (currentId % width === width - 1)
         const newSquares = []
 
+
         setTimeout(() => {
             //check←
             if (!isLeftEdge) {
@@ -329,10 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const newId = squares[currentId + 1 + width].id
                 newSquares.push(document.getElementById(newId))
             }
-            for (let i = 0; i < newSquares.length; i++) {
-                click(newSquares[i])
-            }
-
+            newSquares.forEach(item => click(item))
         }, 10)
     }
 
@@ -368,8 +365,8 @@ document.addEventListener('DOMContentLoaded', () => {
     //check for win
     function checkForWin() {
         let matches = 0
-        for (let i = 0; i < squares.length; i++) {
-            if (squares[i].classList.contains('flag') && squares[i].classList.contains('flag')) {
+        squares.forEach(square => {
+            if (square.classList.contains('flag') && square.classList.contains('flag')) {
                 matches++
             }
             if (matches === bombAmount) {
@@ -378,6 +375,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 header.innerHTML = 'You win:)'
                 game.style.visibility = 'visible'
             }
-        }
+        })
     }
 })
